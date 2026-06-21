@@ -1,0 +1,84 @@
+.forecast-chart-container {
+  padding: 1.5rem;
+  margin-top: 2rem;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+}
+
+.forecast-chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.forecast-chart-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 0.25rem;
+}
+
+.forecast-chart-subtitle {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+}
+
+.forecast-medicine-select {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-primary);
+  font-size: 0.95rem;
+  outline: none;
+  cursor: pointer;
+  min-width: 200px;
+}
+
+.forecast-medicine-select:focus {
+  border-color: var(--color-primary);
+}
+
+.forecast-insights-panel {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.insight-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.insight-stat.action-required {
+  margin-left: auto;
+  align-items: flex-end;
+}
+
+.insight-label {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+.insight-value {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.insight-value.highlight {
+  color: #10b981; /* Matches agent line color */
+}
+
+.insight-value.warning {
+  color: var(--color-warning);
+}
