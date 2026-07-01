@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import PageHeader from '../../components/PageHeader/PageHeader';
 import AlertCard from '../../components/AlertCard/AlertCard';
-import { AlertTriangle, ShieldAlert, Clock, Info } from 'lucide-react';
+import { AlertTriangle, ShieldAlert, Clock, Info, CloudLightning, HeartPulse } from 'lucide-react';
 import { alertService } from '../../services/alertService';
 
 const AlertCenter = () => {
@@ -25,6 +25,8 @@ const AlertCenter = () => {
   }, []);
 
   const getAlertIcon = (category, type) => {
+    if (category === 'Weather') return CloudLightning;
+    if (category === 'Health') return HeartPulse;
     if (category === 'Agent') return Info;
     if (category === 'Stock') return AlertTriangle;
     if (category === 'Expiry') {

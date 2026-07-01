@@ -167,6 +167,11 @@ const getAlerts = async (req, res) => {
       });
     }
 
+    // 3. Fetch Weather & Health Intelligence
+    const { getSeasonalIntelligence } = require('../services/seasonalHealthService');
+    const externalAlerts = await getSeasonalIntelligence();
+    alerts.push(...externalAlerts);
+
     // Sort combined payload
     alerts.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
 
